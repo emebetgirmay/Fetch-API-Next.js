@@ -1,8 +1,9 @@
-"use client";
+'use client';
 import React, { useState, useEffect } from 'react';
 import useMovieFetch, { Movie } from '../hooks/useFetchMovies';
 import Footer from '../shared-component/Footer';
 import NavBar from '../shared-component/NavBar';
+import Image from 'next/image';
 
 const MainPage: React.FC = () => {
   const { latestMovies, latestSeries, searchResults, loading, error, searchMovies } = useMovieFetch();
@@ -216,6 +217,9 @@ const MainPage: React.FC = () => {
                         <img
                           src={`https://image.tmdb.org/t/p/w500${series.poster_path}`}
                           alt={series.title}
+                          width={100}
+                          height={100}
+                          sizes='100vw'
                           className="w-full h-72 object-cover"
                         />
                         <div className="p-6">

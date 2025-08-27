@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Button from '../Button';
 import { FaApple, FaGooglePlay, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa6';
 
@@ -9,7 +10,13 @@ const Footer = () => {
         <div className="min-w-[200px]">
           <h1 className="text-2xl font-bold mb-4">Download Our App</h1>
           <div className="flex items-center mb-6">
-            <img src="/popcorn.jpg" alt="Popcorn" className="w-8 h-8 mr-3 rounded-full" />
+            <Image src={'/popcorn.jpg'}
+            width={0}
+            height={0}
+            sizes='100vw'
+            alt="Popcorn" 
+            className="w-8 h-8 mr-3 rounded-full"
+              />
             <span className="text-xl font-semibold">Moovie</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
